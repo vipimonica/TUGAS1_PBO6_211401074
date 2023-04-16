@@ -1,0 +1,20 @@
+package com.example;
+
+public class Karakter {
+    private String nama;
+    private int level;
+
+    public Karakter(String nama, int level) {
+        this.nama = nama;
+        this.level = level;
+    }
+
+    public void perkenalan() {
+        System.out.println("halo, nama saya " + nama + " dan saat ini berada dilevel " + level + ".");
+    }
+
+    public static void main(String[] args) {
+        Karakter karakter = new Karakter("BUDI", 10);
+        karakter.perkenalan();
+    }
+}

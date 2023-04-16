@@ -1,0 +1,24 @@
+package game;
+
+public class Main {
+    public static void main(String[] args) {
+        Karakter hero = new Karakter("Hero", 100, 20, 10);
+        Karakter monster = new Karakter("Monster", 80, 15, 5);
+
+        System.out.println(hero.getNama() + " vs " + monster.getNama());
+        System.out.println("       ");
+
+        while (hero.getKesehatan() > 0 && monster.getKesehatan() > 0) {
+            hero.serang(monster);
+            if (monster.getKesehatan() > 0) {
+                monster.serang(hero);
+            }
+        }
+
+        if (hero.getKesehatan() > 0) {
+            System.out.println(hero.getNama() + " menang!");
+        } else {
+            System.out.println(monster.getNama() + " menang!");
+        }
+    }
+}
